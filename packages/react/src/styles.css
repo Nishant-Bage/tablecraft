@@ -1,0 +1,234 @@
+.tc {
+  --tc-border: #e7eaf0;
+  --tc-accent: #4763e4;
+  color: #354058;
+  font: inherit;
+}
+.tc button,
+.tc input,
+.tc select,
+.tc summary {
+  font: inherit;
+}
+.tc button,
+.tc summary {
+  cursor: pointer;
+}
+.tc button:disabled {
+  cursor: default;
+  opacity: 0.35;
+}
+.tc button:focus-visible,
+.tc input:focus-visible,
+.tc select:focus-visible,
+.tc summary:focus-visible,
+.tc-scroll:focus-visible {
+  outline: 3px solid #aab7ff;
+  outline-offset: 3px;
+}
+.tc-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--tc-border);
+  flex-wrap: wrap;
+}
+.tc-search {
+  flex: 1;
+  min-width: 190px;
+  max-width: 350px;
+}
+.tc input[type="search"],
+.tc select {
+  padding: 9px 12px;
+  border: 1px solid var(--tc-border);
+  border-radius: 7px;
+  background: #fff;
+  color: #586379;
+}
+.tc input[type="search"] {
+  width: 100%;
+}
+.tc-columns {
+  position: relative;
+  margin-left: auto;
+}
+.tc-columns summary {
+  list-style: none;
+  padding: 9px 12px;
+  border: 1px solid var(--tc-border);
+  border-radius: 7px;
+  background: #fff;
+}
+.tc-columns summary::-webkit-details-marker {
+  display: none;
+}
+.tc-columns summary span {
+  margin-left: 12px;
+  color: #97a1b7;
+}
+.tc-columns fieldset {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  top: 39px;
+  width: 200px;
+  background: #fff;
+  border: 1px solid var(--tc-border);
+  padding: 14px;
+  border-radius: 9px;
+  box-shadow: 0 14px 30px #2432521a;
+}
+.tc-columns legend {
+  font-size: 11px;
+  background: white;
+  padding: 4px;
+}
+.tc-columns label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 8px 0;
+}
+.tc input[type="checkbox"] {
+  accent-color: var(--tc-accent);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.tc-scroll {
+  overflow: auto;
+}
+.tc table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+.tc th {
+  background: #f9fafc;
+  border-bottom: 1px solid var(--tc-border);
+  font-size: 11px;
+  font-weight: 500;
+  color: #8992a4;
+  padding: 13px 16px;
+}
+.tc td {
+  border-bottom: 1px solid #eff1f5;
+  padding: 17px 16px;
+  font-size: 12px;
+}
+.tc-sort {
+  border: 0;
+  background: none;
+  padding: 0;
+  color: inherit;
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+}
+.tc-sort span {
+  font-size: 13px;
+  color: #a7afbf;
+}
+.tc th[aria-sort] {
+  color: var(--tc-accent);
+}
+.tc tr[data-selected] {
+  background: #f3f5ff;
+}
+.tc tr:hover td {
+  background: #f8faff;
+}
+.tc .tc-check {
+  padding-left: 24px;
+  width: 45px;
+  padding-right: 5px;
+}
+.tc-footer {
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 11px;
+  color: #8b94a6;
+  flex-wrap: wrap;
+}
+.tc-footer > div {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.tc-footer label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tc-footer select {
+  padding: 5px;
+}
+.tc nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.tc nav button {
+  border: 1px solid var(--tc-border);
+  background: #fff;
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-size: 19px;
+  color: #5e6b86;
+}
+.tc-selection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 24px;
+  background: #eff2ff;
+  color: #526ac4;
+  font-size: 12px;
+}
+.tc-selection button,
+.tc-empty button {
+  border: 0;
+  background: transparent;
+  text-decoration: underline;
+  color: var(--tc-accent);
+  padding: 4px;
+}
+.tc-empty {
+  padding: 50px 20px;
+  text-align: center;
+  color: #8d97a8;
+  font-size: 13px;
+}
+.tc-empty button {
+  display: block;
+  margin: 12px auto 0;
+}
+.tc-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+@media (max-width: 600px) {
+  .tc-toolbar,
+  .tc-footer {
+    padding: 15px;
+  }
+  .tc-footer > div {
+    gap: 12px;
+  }
+  .tc-search {
+    max-width: none;
+  }
+  .tc-selection {
+    flex-wrap: wrap;
+  }
+}

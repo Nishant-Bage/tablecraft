@@ -1,0 +1,35 @@
+{
+  "name": "tablecraft-workspace",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build:package": "npm run build -w @nishant-bage/tablecraft",
+    "build": "npm run build:package && tsc --noEmit && vite build",
+    "test": "vitest run",
+    "check": "tsc --noEmit",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@nishant-bage/tablecraft": "*",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/node": "^24.0.0",
+    "@vitejs/plugin-react": "latest",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0",
+    "typescript": "^6.0.0",
+    "jsdom": "latest",
+    "@testing-library/react": "latest",
+    "@testing-library/user-event": "latest",
+    "@testing-library/jest-dom": "latest",
+    "prettier": "latest"
+  }
+}
